@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+font-family: 'Roboto', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+:root{
+    --font-family:'Roboto', sans-serif;
+    --main-color:#be9c79;
+    --sub-color:#666;
+    --black:#000;
+    --white:#ffffff;
+    --main-heading-font:24px;
+    --sub-heading-font:24px;
+    --font-size:16px;
+    --border:.1 solid var(--black);
+    --box-shadow: .5px 5px 2px var(--main-color);
+    }
+    html{
+        font-size: 62.5%;
+       scroll-behavior: smooth;
+        scroll-padding-top: 6px;
+        background-color:var(--white) ;
+    }
+    h1{
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        color: #000;
+        text-transform: capitalize;
+        margin-top: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #000;
+        text-decoration:2px  underline #b8860b;
+    }
+   
+    .container {
+        display: grid;
+       min-height: 80vh;
+     padding: 10px;
+      margin-top: 20px;
+      
+        }
+    .container .card-container{
+        height:80vh;
+        width: 100%;
+        display: grid;
+    grid-template-columns:repeat(3,200px);
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    padding:60px ;
+    
+       
+      }
+    .img{
+       min-height: 200px;
+    width: 200px;
+        background-color: #ffffff;
+        padding:5px;
+        border-radius: 3px;
+        object-fit: cover;
+        object-position: center center;
+    }
+    @media screen and (max-width:576px)  {
+        .container{
+            min-height:100vh;
+            max-width: 500px;
+         padding: 20px;
+            display: block;
+            
+        }
+       .container .card-container{
+        min-height:190vh;
+            max-width:500px;
+           display:block;
+          padding:30px;
+           text-align: center;
+           
+        }
+       .container .card-container .img{
+         max-width:200px;   
+    display: inline-block;
+   margin-top: 10px;
+    
+         }
+    }
+    #modal{
+        display: grid;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 0;
+      width: 100%;
+        height: 100%;
+        place-items:center;
+    display: none;
+     
+    }
+    #modal.active{
+        display:grid;
+        place-items: center;
+     }
+    #img{
+        max-width: 250px;
+        max-height: 250px;
+        border: 4px solid white;
+        box-shadow: 1px 3px 20px rgb(181, 149, 149);
+    }
+    #modal.active .icon{
+        position: relative;
+        top: 0;
+        left: 10px;
+    }
+    #modal.active .fa-times{
+      position: absolute;
+       top: 0;
+       bottom: -100px;
+     }
+    
